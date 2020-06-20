@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">"ShruthiSports</string>
+    <string-array name="team_details">
+        <item>PlayerName</item>
+        <item>Year</item>
+        <item>PlayerRollNumber</item>
+        <item>PlayerPhone</item>
+        <item>PlayerEmail</item>
+    </string-array>
+</resources>
