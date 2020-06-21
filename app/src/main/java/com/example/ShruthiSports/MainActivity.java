@@ -1,28 +1,46 @@
 package com.example.ShruthiSports;
-import android.content.Context;
-import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
-import android.view.LayoutInflater;
+
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
-    private LinearLayout parentLinearLayout;
+import org.w3c.dom.Text;
+
+public class MainActivity extends AppCompatActivity  {
+    TextView registration;
+    TextView teamsize;
+    Spinner size;
+    Button next;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        parentLinearLayout=(LinearLayout) findViewById(R.id.parent_linear_layout);
+        setContentView(R.layout.activity_registration);
+        registration = (TextView) findViewById(R.id.textregister);
+        teamsize = (TextView) findViewById(R.id.textteamsize);
+        size = (Spinner) findViewById(R.id.spinner);
+        next = (Button) findViewById(R.id.button);
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               openregistration();
+            }
+        });
+
+
+
     }
-    public void onAddField(View v) {
-        LayoutInflater inflater=(LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        final View rowView=inflater.inflate(R.layout.field, null);
-        // Add the new row before the add field button.
-        parentLinearLayout.addView(rowView, parentLinearLayout.getChildCount() - 1);
-    }
-    public void onDelete(View v) {
-        parentLinearLayout.removeView((View) v.getParent());
+    public void openregistration() {
+        Intent intent = new Intent(this,registration.class);
+        startActivity(intent);
+
+
     }
 }
