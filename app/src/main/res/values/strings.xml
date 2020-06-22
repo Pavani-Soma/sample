@@ -1,16 +1,16 @@
 <resources>
     <string name="app_name">"ShruthiSports</string>
     <string-array name="team_size">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
+        <item>badminton</item>
+        <item>basketball</item>
+        <item>cricket</item>
+        <item>football</item>
+        <item>kabaddi</item>
+        <item>tabletennis</item>
+        <item>throwball</item>
+        <item>volleyball</item>
+        <item>chess</item>
+        <item>carroms</item>
     </string-array>
 
 </resources>
